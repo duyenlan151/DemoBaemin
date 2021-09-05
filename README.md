@@ -18,4 +18,4 @@
 
 ###### 4. File apk for android
 
-[here](./baemin-v1-release.apk)
+[baemin-v1-release.apk](./baemin-v1-release.apk)
