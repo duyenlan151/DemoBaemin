@@ -14,13 +14,14 @@ import ListCategory from './src/screens/Category/ListCategory';
 import CustomDrawerContent from './src/components/CustomDrawerContent';
 import Detail from './src/screens/Category/Detail';
 import NotFound from './src/screens/NotFound';
+import RNBootSplash from "react-native-bootsplash";
 
 const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
     // <SafeAreaView>
-      <NavigationContainer>
+      <NavigationContainer onReady={() => RNBootSplash.hide()}>
         <Drawer.Navigator
           screenOptions={{headerShown: false}}
           drawerContent={props => <CustomDrawerContent {...props} />}>
