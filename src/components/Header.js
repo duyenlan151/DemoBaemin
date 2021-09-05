@@ -94,12 +94,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 25,
-    marginTop: 10
+    marginTop: 10,
+    paddingHorizontal: 15,
   },
   input: {
     height: 42,
     borderWidth: 0,
     padding: 10,
+    maxWidth: 250
   },
   search: {
     width: 25,

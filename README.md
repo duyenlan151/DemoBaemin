@@ -8,7 +8,8 @@
 
 ###### 3. Open new terminal, run: npx react-native android or npm android or yarn android
 
-**Make sure you has run emulators (android studio or genymotion)**
+
+**Make sure your emulator is running (android studio or genymotion)**
 
 [<img src="src/assets/demo/01.png" width="250"/>](src/assets/demo/01.png)
 [<img src="src/assets/demo/02.png" width="250"/>](src/assets/demo/02.png)
