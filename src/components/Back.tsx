@@ -1,10 +1,14 @@
 import { useNavigation } from "@react-navigation/native";
-import React from "react";
+import React, { FC, ReactNode } from "react";
 import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
-import COLORS from "../contants/theme";
+import COLORS from "@contants/theme";
 
-export default function Back({ children }) {
+interface IProps {
+    children: ReactNode
+}
+
+const Back: FC<IProps> = ({ children }) => {
     const naviagtion = useNavigation();
 
     return (
@@ -31,3 +35,5 @@ const styles = StyleSheet.create({
         borderColor: COLORS.colorBorder,
     },
 });
+
+export default Back;

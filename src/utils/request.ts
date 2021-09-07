@@ -1,5 +1,6 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { env } from "../env";
+import { IOptions } from '../models/request.model'
 // import { Cookies } from 'react-cookie';
 // const cookies = new Cookies();
 
@@ -13,7 +14,7 @@ axios.defaults.headers.post["Content-Type"] = "multipart/form-data";
  *
  * @return {object}          The parsed JSON from the request
  */
-function parseJSON(response) {
+function parseJSON(response: AxiosResponse) {
     if (response.status === 204 || response.status === 205) {
         return null;
     }
@@ -28,7 +29,7 @@ function parseJSON(response) {
  *
  * @return {object|undefined} Returns either the response, or throws an error
  */
-function checkStatus(response) {
+function checkStatus(response: AxiosResponse) {
     if (response?.status >= 200 && response?.status < 300) {
         return response;
     }
@@ -46,8 +47,8 @@ function checkStatus(response) {
  *
  * @return {object}           The response data
  */
-export default function request(url, options) {
+export default function request(url: string, options?: IOptions) {
     return axios(url, options)
-        .then((response) => parseJSON(response))
+        .then((response: AxiosResponse) => parseJSON(response))
         .catch((error) => checkStatus(error.response));
 }

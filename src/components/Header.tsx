@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import React from 'react';
+import React, { useState, FC } from 'react';
 import {
   Linking,
   StyleSheet,
@@ -9,12 +9,12 @@ import {
   View
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import ICMail from '../assets/icons/ic-inbox.svg';
-import ICMenu from '../assets/icons/ic-drawer.svg';
-import COLORS from '../contants/theme';
+import ICMail from '@assets/icons/ic-inbox.svg';
+import ICMenu from '@assets/icons/ic-drawer.svg';
+import COLORS from '@contants/theme';
 
-export default function Header() {
-  const [text, setText] = React.useState('Useless Text');
+const Header: FC = () => {
+  const [text, setText] = useState('Useless Text');
   const navigation = useNavigation();
 
   // function onchange value input search
@@ -109,3 +109,5 @@ const styles = StyleSheet.create({
     marginRight: 5,
   },
 });
+
+export default Header;

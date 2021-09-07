@@ -1,14 +1,20 @@
 import { useRoute } from "@react-navigation/native";
-import React from "react";
+import React, { FC } from "react";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
-import Back from "../../components/Back";
-import COLORS from "../../contants/theme";
-import { randomImages } from "../../mock";
+import Back from "@components/Back";
+import COLORS from "@contants/theme";
+import { randomImages } from "@mock/index";
+import { ICategory } from "@models/category.model";
 
-export default function Detail() {
+interface ParamTypes {
+    category: ICategory
+}
+
+const Detail: FC = () => {
     const route = useRoute();
     const { category } = route?.params;
+    // const category: ICategory =  route?.params?.category;
 
     return (
         <Back>
@@ -109,3 +115,5 @@ const styles = StyleSheet.create({
         marginLeft: 6,
     },
 });
+
+export default Detail;

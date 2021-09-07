@@ -16,7 +16,7 @@ import Detail from './src/screens/Category/Detail';
 import NotFound from './src/screens/NotFound';
 import RNBootSplash from "react-native-bootsplash";
 
-const Drawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator<any>();
 
 export default function App() {
   return (

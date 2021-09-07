@@ -1,27 +1,33 @@
 import { useNavigation } from "@react-navigation/native";
-import React from 'react';
+import React, { useState, useEffect, FC } from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
-import Category from '../../components/Category';
-import Layout from "../../components/Layout";
-import COLORS from '../../contants/theme';
-import {categories} from '../../mock';
-import {categoryService} from '../../services/categry.service';
+import Category from '@components/Category';
+import Layout from "@components/Layout";
+import COLORS from '@contants/theme';
+import {categories} from '@mock/index';
+import { ICategory } from "@models/category.model";
+import categoryService from '@services/category.service';
 
-export default function ListCategory() {
+const ListCategory: FC = () => {
   const navigation = useNavigation();
-  const [dataCategories, setdataCategories] = React.useState(categories);
-
-  React.useEffect(() => {
+  const [dataCategories, setdataCategories] = useState<ICategory[]>(categories);
+  
+  useEffect(() => {
     fetchCateoryList();
+
+    // unsub
     return () => {
-      fetchCateoryList();
     };
   }, []);
 
   // function fetch list data
   const fetchCateoryList = async () => {
-    let resCategory = await categoryService.getAll();
-    // console.log("🚀 ~ file: ListCategory.js ~ line 21 ~ React.useEffect ~ resCategory", resCategory)
+    try{
+      let resCategory = await categoryService.getAll();
+      // console.log("🚀 ~ file: ListCategory.js ~ line 21 ~ React.useEffect ~ resCategory", resCategory)
+    }catch(err){
+      console.log('Error:', err);
+    }
   };
 
   return (
@@ -37,6 +43,10 @@ export default function ListCategory() {
                     navigation.navigate("Detail", {
                         category: item,
                     })
+                    // navigation.navigate('Detail', {
+                    //   screen: 'Feed',
+                    //   params: { sort: 'latest' },
+                    // })
                 }
                 category={item}
               />
@@ -76,3 +86,5 @@ const styles = StyleSheet.create({
     letterSpacing: 0.1,
   },
 });
+
+export default ListCategory;

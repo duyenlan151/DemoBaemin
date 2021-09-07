@@ -1,8 +1,8 @@
 import { DrawerItem } from "@react-navigation/drawer";
 import { useNavigation } from "@react-navigation/native";
-import React from "react";
+import React, { FC } from "react";
 
-export default function Navbar() {
+const Navbar: FC = () => {
     const navigation = useNavigation();
 
     return (
@@ -18,3 +18,6 @@ export default function Navbar() {
         </>
     );
 }
+
+
+export default Navbar;

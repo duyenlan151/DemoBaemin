@@ -1,4 +1,5 @@
-import React from "react";
+import React, { FC } from "react";
+import PropTypes from 'prop-types';
 import {
     Image,
     StyleSheet,
@@ -7,12 +8,18 @@ import {
     View,
 } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
-import COLORS from "../contants/theme";
-import { randomImages } from "../mock";
+import COLORS from "@contants/theme";
+import { randomImages } from "@mock/index";
 
-import ICMenu from '../assets/icons/ic-partnerBadge.svg';
+import ICMenu from '@assets/icons/ic-partnerBadge.svg';
+import { ICategory } from "@models/category.model";
 
-function Category({ category, onPress }) {
+interface IProps{
+    category: ICategory,
+    onPress: () => void
+};
+
+const Category: FC<IProps> = ({ category, onPress }) => {
     const { title, desc, imgUrl, star, km } = category;
 
     return (
@@ -58,6 +65,11 @@ function Category({ category, onPress }) {
         </TouchableWithoutFeedback>
     );
 }
+
+Category.propTypes = {
+    category: PropTypes.array.isRequired,
+    onPress: PropTypes.func
+};
 
 const styles = StyleSheet.create({
     container: {

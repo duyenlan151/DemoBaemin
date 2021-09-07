@@ -1,9 +1,13 @@
-import React from "react";
+import React, { FC, ReactNode } from "react";
 import { StyleSheet, View, SafeAreaView } from "react-native";
-import COLORS from "../contants/theme";
-import Header from "./Header";
+import COLORS from "@contants/theme";
+import Header from "@components//Header";
 
-export default function Layout({ children }) {
+interface IProps {
+    children: ReactNode
+}
+
+const Layout: FC<IProps> = ({ children }) => {
     return (
         <SafeAreaView style={styles.container}>
             {/* <View> */}
@@ -19,3 +23,5 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.white,
     },
 });
+
+export default Layout;
