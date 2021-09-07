@@ -1,12 +1,12 @@
-import { useNavigation } from "@react-navigation/native";
-import React, { useState, useEffect, FC } from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import Category from '@components/Category';
 import Layout from "@components/Layout";
 import COLORS from '@contants/theme';
-import {categories} from '@mock/index';
+import { categories } from '@mock/index';
 import { ICategory } from "@models/category.model";
+import { useNavigation } from "@react-navigation/native";
 import categoryService from '@services/category.service';
+import React, { FC, useEffect, useState } from 'react';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 interface ListCategoryProps {}
 

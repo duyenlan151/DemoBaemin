@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from "axios";
-import { env } from "../env";
-import { IOptions } from '../models/request.model'
+import { env } from "@env/index";
+import { IOptions } from '@models/request.model'
 // import { Cookies } from 'react-cookie';
 // const cookies = new Cookies();
 

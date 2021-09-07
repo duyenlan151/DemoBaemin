@@ -1,5 +1,5 @@
-import { ICategory } from "../models/category.model";
-import request from "../utils/request";
+import { ICategory } from "@models/category.model";
+import request from "@utils/request";
 
 const getAll = (): Promise<ICategory[]>  => request("/users");
 

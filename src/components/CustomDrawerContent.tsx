@@ -1,10 +1,8 @@
-import { DrawerContentScrollView } from "@react-navigation/drawer";
-import React, { FC, ReactNode } from "react";
 import Navbar from "@components/Navbar";
+import { DrawerContentScrollView } from "@react-navigation/drawer";
+import React, { FC } from "react";
 
-interface DrawerProps {
-    children: ReactNode
-}
+interface DrawerProps {}
 
 const CustomDrawerContent: FC<DrawerProps> = (props) => {
     return (

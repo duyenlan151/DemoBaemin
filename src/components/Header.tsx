@@ -1,5 +1,8 @@
+import ICMenu from '@assets/icons/ic-drawer.svg';
+import ICMail from '@assets/icons/ic-inbox.svg';
+import COLORS from '@contants/theme';
 import { useNavigation } from '@react-navigation/native';
-import React, { useState, FC } from 'react';
+import React, { FC, useState } from 'react';
 import {
   Linking,
   StyleSheet,
@@ -9,18 +12,15 @@ import {
   View
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import ICMail from '@assets/icons/ic-inbox.svg';
-import ICMenu from '@assets/icons/ic-drawer.svg';
-import COLORS from '@contants/theme';
 
-interface HeaderProps {}
+interface HeaderProps { }
 
 const Header: FC<HeaderProps> = () => {
   const [text, setText] = useState('Useless Text');
   const navigation = useNavigation();
 
   // function onchange value input search
-  const onChangeText = () => {};
+  const onChangeText = () => { };
 
   return (
     <View style={styles.container}>
@@ -36,7 +36,7 @@ const Header: FC<HeaderProps> = () => {
         <View style={styles.menu}>
           <TouchableWithoutFeedback
             onPress={() => Linking.openURL('mailto:support@example.com')}>
-            <ICMail width={23} height={17} style={styles.iconLeft}/>
+            <ICMail width={23} height={17} style={styles.iconLeft} />
           </TouchableWithoutFeedback>
 
           <TouchableWithoutFeedback onPress={() => navigation.openDrawer()}>

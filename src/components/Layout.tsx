@@ -1,7 +1,7 @@
-import React, { FC, ReactNode } from "react";
-import { StyleSheet, View, SafeAreaView } from "react-native";
-import COLORS from "@contants/theme";
 import Header from "@components//Header";
+import COLORS from "@contants/theme";
+import React, { FC, ReactNode } from "react";
+import { SafeAreaView, StyleSheet } from "react-native";
 
 interface LayoutProps {
     children: ReactNode

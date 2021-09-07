@@ -1,20 +1,17 @@
-import React, { FC } from "react";
+import ICMenu from '@assets/icons/ic-partnerBadge.svg';
+import COLORS from "@contants/theme";
+import { ICategory } from "@models/category.model";
 import PropTypes from 'prop-types';
+import React, { FC } from "react";
 import {
     Image,
     StyleSheet,
     Text,
     TouchableWithoutFeedback,
-    View,
+    View
 } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
-import COLORS from "@contants/theme";
-import { randomImages } from "@mock/index";
-
-import ICMenu from '@assets/icons/ic-partnerBadge.svg';
-import { ICategory } from "@models/category.model";
-
-interface CategoryProps{
+interface CategoryProps {
     category: ICategory,
     onPress: () => void
 };
@@ -42,7 +39,7 @@ const Category: FC<CategoryProps> = ({ category, onPress }) => {
                 <View style={styles.wrapperText}>
                     <View style={styles.groupHeader}>
                         <Text style={styles.title} numberOfLines={2}>
-                            <ICMenu style={styles.icon} width={20} height={15}/>
+                            <ICMenu style={styles.icon} width={20} height={15} />
                             {title ? title : ""}
                         </Text>
                         <Text style={styles.groupBody} numberOfLines={2}>
@@ -55,7 +52,7 @@ const Category: FC<CategoryProps> = ({ category, onPress }) => {
                             {star ? star : "1"}
                         </Text>
                         <Text style={styles.textTiny}>(999+)</Text>
-                        <Text style={styles.circle}>{} </Text>
+                        <Text style={styles.circle}>{ } </Text>
                         <Text style={styles.iconFooter}>
                             {km ? km + "km" : "0"}{" "}
                         </Text>

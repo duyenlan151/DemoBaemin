@@ -1,20 +1,15 @@
+import Back from "@components/Back";
+import COLORS from "@contants/theme";
 import { useRoute } from "@react-navigation/native";
 import React, { FC } from "react";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
-import Back from "@components/Back";
-import COLORS from "@contants/theme";
-import { randomImages } from "@mock/index";
-import { ICategory } from "@models/category.model";
 
-interface DetailProps {
-    // category: ICategory
-}
+interface DetailProps {}
 
 const Detail: FC<DetailProps> = () => {
     const route = useRoute();
     const { category } = route?.params;
-    // const category: ICategory =  route?.params?.category;
 
     return (
         <Back>
@@ -24,16 +19,6 @@ const Detail: FC<DetailProps> = () => {
                         <Image
                             style={styles.largeImage}
                             source={category?.imgUrl}
-                            // source={
-                            //     randomImages[
-                            //         Math.floor(
-                            //             Math.random() * randomImages.length
-                            //         )
-                            //     ]
-                            // }
-                            // source={{
-                            //     uri: "https://i.vimeocdn.com/portrait/58832_300x300.jpg",
-                            // }}
                         />
                     </View>
                     <View style={styles.wrapperBody}>

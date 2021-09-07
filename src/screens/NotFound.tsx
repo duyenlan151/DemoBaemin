@@ -1,9 +1,8 @@
-import { useNavigation } from '@react-navigation/native';
+import COLORS from '@contants/theme';
 import React, { FC } from "react";
 import { StyleSheet, Text, View } from 'react-native';
-import COLORS from '@contants/theme';
 
-interface NotFoundProps {}
+interface NotFoundProps { }
 
 const NotFound: FC<NotFoundProps> = () => {
 

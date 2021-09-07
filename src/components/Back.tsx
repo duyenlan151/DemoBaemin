@@ -1,8 +1,8 @@
+import COLORS from "@contants/theme";
 import { useNavigation } from "@react-navigation/native";
 import React, { FC, ReactNode } from "react";
 import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
-import COLORS from "@contants/theme";
 
 interface BackProps {
     children: ReactNode

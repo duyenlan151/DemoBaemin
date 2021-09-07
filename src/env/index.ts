@@ -1,4 +1,4 @@
-export interface IEnv {
+interface IEnv {
     apiURL: string
 }
   

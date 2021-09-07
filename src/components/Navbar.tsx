@@ -2,8 +2,7 @@ import { DrawerItem } from "@react-navigation/drawer";
 import { useNavigation } from "@react-navigation/native";
 import React, { FC } from "react";
 
-interface NavbarProps {
-}
+interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = () => {
     const navigation = useNavigation();
