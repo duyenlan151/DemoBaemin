@@ -4,11 +4,11 @@ import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import COLORS from "@contants/theme";
 
-interface IProps {
+interface BackProps {
     children: ReactNode
 }
 
-const Back: FC<IProps> = ({ children }) => {
+const Back: FC<BackProps> = ({ children }) => {
     const naviagtion = useNavigation();
 
     return (

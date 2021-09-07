@@ -3,11 +3,11 @@ import { StyleSheet, View, SafeAreaView } from "react-native";
 import COLORS from "@contants/theme";
 import Header from "@components//Header";
 
-interface IProps {
+interface LayoutProps {
     children: ReactNode
 }
 
-const Layout: FC<IProps> = ({ children }) => {
+const Layout: FC<LayoutProps> = ({ children }) => {
     return (
         <SafeAreaView style={styles.container}>
             {/* <View> */}

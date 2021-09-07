@@ -8,7 +8,9 @@ import {categories} from '@mock/index';
 import { ICategory } from "@models/category.model";
 import categoryService from '@services/category.service';
 
-const ListCategory: FC = () => {
+interface ListCategoryProps {}
+
+const ListCategory: FC<ListCategoryProps> = () => {
   const navigation = useNavigation();
   const [dataCategories, setdataCategories] = useState<ICategory[]>(categories);
   

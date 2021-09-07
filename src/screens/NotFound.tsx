@@ -3,7 +3,9 @@ import React, { FC } from "react";
 import { StyleSheet, Text, View } from 'react-native';
 import COLORS from '@contants/theme';
 
-const NotFound: FC = () => {
+interface NotFoundProps {}
+
+const NotFound: FC<NotFoundProps> = () => {
 
     return (
         <View style={styles.container}>

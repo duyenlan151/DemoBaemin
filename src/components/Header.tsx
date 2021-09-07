@@ -13,7 +13,9 @@ import ICMail from '@assets/icons/ic-inbox.svg';
 import ICMenu from '@assets/icons/ic-drawer.svg';
 import COLORS from '@contants/theme';
 
-const Header: FC = () => {
+interface HeaderProps {}
+
+const Header: FC<HeaderProps> = () => {
   const [text, setText] = useState('Useless Text');
   const navigation = useNavigation();
 

@@ -14,12 +14,12 @@ import { randomImages } from "@mock/index";
 import ICMenu from '@assets/icons/ic-partnerBadge.svg';
 import { ICategory } from "@models/category.model";
 
-interface IProps{
+interface CategoryProps{
     category: ICategory,
     onPress: () => void
 };
 
-const Category: FC<IProps> = ({ category, onPress }) => {
+const Category: FC<CategoryProps> = ({ category, onPress }) => {
     const { title, desc, imgUrl, star, km } = category;
 
     return (

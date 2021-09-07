@@ -7,11 +7,11 @@ import COLORS from "@contants/theme";
 import { randomImages } from "@mock/index";
 import { ICategory } from "@models/category.model";
 
-interface ParamTypes {
-    category: ICategory
+interface DetailProps {
+    // category: ICategory
 }
 
-const Detail: FC = () => {
+const Detail: FC<DetailProps> = () => {
     const route = useRoute();
     const { category } = route?.params;
     // const category: ICategory =  route?.params?.category;
